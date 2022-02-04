@@ -1,0 +1,9 @@
+version: "3"
+services:
+  partner-service:
+    image: adoptopenjdk/openjdk11:jdk-11.0.11_9-alpine
+    volumes:
+    - ./partner-service-1.0.1-all.jar:/app.jar
+    command: sh -c "java -jar app.jar --port=8032"
+    ports:
+      - "8032:8032"
